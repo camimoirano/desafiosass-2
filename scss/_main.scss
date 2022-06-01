@@ -1,0 +1,107 @@
+div{
+	.navegacion{
+		font-family: $fuente-txt;
+		color: $color-srio;
+		background-color: #D4E0F7;
+		font-size: 1.1rem;
+	}
+}
+
+%titulo{
+	font-family: $fuente-t;
+	color: $color-ppal;
+	font-size: $title-size;
+}
+
+%p{
+	font-family: $fuente-txt;
+	color: $color-ppal;
+	font-size: 1.1rem;
+	font-weight: map-get($fuentes, regular);
+}
+
+
+.home{
+	h1{
+		@extend %titulo;
+	}
+	h2{
+		@extend %titulo;
+	}
+	p{
+		@extend %p;
+	}
+	ul{
+		list-style-type: none;
+		li{
+			img{
+				&:hover{
+					transform: scale(1.3);
+					box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
+				}
+			}
+		}
+	}
+}
+
+#footer{
+	background-color: #DBD3C6;
+	ul{
+		list-style-type: none;
+		a{
+			text-decoration: none;
+			color: $color-srio;
+			font-family: $fuente-txt;
+		}
+	}
+	img{
+		height: 150px;
+	}
+}
+
+#contacto{
+	height: 70vh;
+	h1{
+		@extend %titulo;
+	}
+	label{
+		@extend %p;
+	}
+	.form-control{
+		&:hover{
+			background-color: pink;
+		}
+	}
+}
+
+.servicios{
+	height: 70vh;
+	h1{
+		@extend %titulo;
+	}
+	p{
+		@extend %p;
+	}
+}
+
+@mixin catalogo{
+	font-family: $fuente-t;
+	color: $color-ppal;
+}
+
+.catalogo{
+	h1{
+		@include catalogo;
+		font-size: $title-size;
+	}
+	h2{
+		@include catalogo;
+		font-size: 1.4rem;
+	}
+	img{
+		&:hover{
+			transform: scale(1.1);
+			box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.2);
+		}
+	}
+}
